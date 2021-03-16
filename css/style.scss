@@ -45,10 +45,6 @@ main {
   section {
     width: 100%;
 
-    p {
-      word-break: normal;
-    }
-
     &:nth-of-type(even) {
       background-color: #eceff1;
     }
@@ -74,6 +70,10 @@ main {
       .content {
         padding: 30px;
         font-size: 16px;
+
+        .max-767px {
+          display: none;
+        }
       }
 
       h3 {
@@ -86,8 +86,9 @@ main {
     &:first-of-type {
       height: 650px;
       background-image: url("../img/mv.png");
-      background-size: contain;
-      background-position: bottom;
+      background-position-x: 50%;
+      background-position-y: 50%;
+      background-size: cover;
       color: #fafafa;
       text-align: center;
 
@@ -193,7 +194,7 @@ main {
               width: 250px;
               height: 250px;
               border-radius: 100%;
-              margin: 30px auto;
+              margin: auto;
             }
           }
           .right-contents {
@@ -215,7 +216,7 @@ main {
       .container {
         width: 800px;
         height: auto;
-        padding-bottom: 50px;
+        padding-bottom: 90px;
 
         .bottom-contents {
           display: flex;
@@ -230,6 +231,10 @@ main {
 
               h3 {
                 margin-bottom: 5px;
+
+                &:nth-of-type(2) {
+                  margin-top: 20px;
+                }
               }
 
               a {
@@ -382,7 +387,6 @@ footer {
 
               .content {
                 margin: 0 auto 10px;
-                width: 100%;
                 text-align: left;
               }
 
@@ -418,6 +422,11 @@ footer {
               h3,
               p {
                 width: 100%;
+              }
+              p {
+                .max-767px {
+                  display: none;
+                }
               }
             }
           }

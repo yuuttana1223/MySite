@@ -50,10 +50,6 @@ main section {
   width: 100%;
 }
 
-main section p {
-  word-break: normal;
-}
-
 main section:nth-of-type(even) {
   background-color: #eceff1;
 }
@@ -82,6 +78,10 @@ main section .container .content {
   font-size: 16px;
 }
 
+main section .container .content .max-767px {
+  display: none;
+}
+
 main section .container h3 {
   font-size: 20px;
 }
@@ -89,8 +89,9 @@ main section .container h3 {
 main section:first-of-type {
   height: 650px;
   background-image: url("../img/mv.png");
-  background-size: contain;
-  background-position: bottom;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: cover;
   color: #fafafa;
   text-align: center;
 }
@@ -206,7 +207,7 @@ main section:nth-of-type(4) .container .bottom-contents .left-contents .image {
   width: 250px;
   height: 250px;
   border-radius: 100%;
-  margin: 30px auto;
+  margin: auto;
 }
 
 main section:nth-of-type(4) .container .bottom-contents .right-contents {
@@ -225,7 +226,7 @@ main section:nth-of-type(4) .container .bottom-contents .right-contents h3:last-
 main section:last-of-type .container {
   width: 800px;
   height: auto;
-  padding-bottom: 50px;
+  padding-bottom: 90px;
 }
 
 main section:last-of-type .container .bottom-contents {
@@ -246,6 +247,10 @@ main section:last-of-type .container .bottom-contents .left-contents .contact-in
 
 main section:last-of-type .container .bottom-contents .left-contents .contact-info h3 {
   margin-bottom: 5px;
+}
+
+main section:last-of-type .container .bottom-contents .left-contents .contact-info h3:nth-of-type(2) {
+  margin-top: 20px;
 }
 
 main section:last-of-type .container .bottom-contents .left-contents .contact-info a {
@@ -380,7 +385,6 @@ footer small {
   }
   main section:nth-of-type(3) .container .bottom-contents .contents .content {
     margin: 0 auto 10px;
-    width: 100%;
     text-align: left;
   }
   main section:nth-of-type(3) .container .bottom-contents .contents:last-of-type .content {
@@ -405,6 +409,9 @@ footer small {
   main section:nth-of-type(4) .container .bottom-contents .right-contents h3,
   main section:nth-of-type(4) .container .bottom-contents .right-contents p {
     width: 100%;
+  }
+  main section:nth-of-type(4) .container .bottom-contents .right-contents p .max-767px {
+    display: none;
   }
   main section:last-of-type .container {
     width: 90%;
